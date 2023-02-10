@@ -17,16 +17,6 @@ function App() {
     setCompletedItems([...completedItems, { ...completedItem, timestamp: new Date().toString() }]);
   };
 
-  const addNotes = (index, notes) => {
-    setBucketList(
-      bucketList.map((item, i) => {
-        if (i === index) {
-          return { ...item, notes };
-        }
-        return item;
-      })
-    );
-  };
 
   const toggleCompletedList = () => {
     setShowCompletedList(!showCompletedList);
@@ -71,7 +61,7 @@ function App() {
             </li>
           ))}
       </ul>
-      <button className="com" onClick={toggleCompletedList}>Toggle Completed List</button>
+      <button className="com" onClick={toggleCompletedList}>View completed items 😁</button>
   {showCompletedList && <CompletedList items={completedItems} />}
 </div>
 );

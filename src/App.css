@@ -24,7 +24,7 @@ form {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  border-color: 10px neonblue;
+  border: 2px solid pink;
   box-shadow: 2px 2px 5px #ddd;
   margin-bottom: 20px;
 }
@@ -53,6 +53,7 @@ button {
   align-items: center;
   background-color: white;
   padding: 20px;
+  border: 2px solid pink;
   border-radius: 10px;
   box-shadow: 2px 2px 5px #ddd;
   margin-top: 20px;
@@ -69,20 +70,7 @@ button {
   background-color: #ffc0cb;
 }
 
-.notes {
-  font-size: 14px;
-  color: #888;
-}
 
-.remove-btn {
-  background-color: #ff69b4;
-  color: white;
-  font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
 .App {
   text-align: center;
 }
@@ -131,6 +119,7 @@ input[type='text'] {
 .add-button:hover {
   background-color: blue;
   color: #282c34;
+  border: 2px solid pink;
   background: transparent;
 }
 
@@ -168,6 +157,7 @@ button {
 button:hover {
   background-color: white;
   color: #282c34;
+ border: 2px solid pink;
 }
 
 h2 {
@@ -176,4 +166,43 @@ h2 {
 .neon-blue-border {
   border: 2px solid neonblue;
 }
+.com {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  background-color: #282c34;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.com:hover {
+  border: 2px solid pink;
+}
+.completed-list {
+  margin-top: 20px;
+  text-align: left;
+}
 
+.completed-list h2 {
+  margin-bottom: 20px;
+  color: pink;
+  align-items: center;
+}
+
+.completed-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.completed-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #ffc0cb;
+}
