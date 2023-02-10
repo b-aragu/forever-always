@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/forever-always/static/css/main.c3a0772d.css",
+    "main.js": "/forever-always/static/js/main.c7ae040a.js",
+    "static/js/787.af6f337f.chunk.js": "/forever-always/static/js/787.af6f337f.chunk.js",
+    "static/media/couple.jpg": "/forever-always/static/media/couple.4b0f17f057a4dd702bf9.jpg",
+    "index.html": "/forever-always/index.html",
+    "main.c3a0772d.css.map": "/forever-always/static/css/main.c3a0772d.css.map",
+    "main.c7ae040a.js.map": "/forever-always/static/js/main.c7ae040a.js.map",
+    "787.af6f337f.chunk.js.map": "/forever-always/static/js/787.af6f337f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3a0772d.css",
+    "static/js/main.c7ae040a.js"
+  ]
+}
