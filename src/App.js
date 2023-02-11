@@ -1,10 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import coupleImage from './couple.jpg';
 
 function App() {
   const [bucketList, setBucketList] = useState([]);
   const [completedItems, setCompletedItems] = useState([]);
+  useEffect(() => {
+    // Get the stored data from local storage
+    const storedBucketList = JSON.parse(localStorage.getItem("bucketList"));
+    const storedCompletedItems = JSON.parse(localStorage.getItem("completedItems"));
+
+    // Update the state with the stored data
+    if (storedBucketList) {
+      setBucketList(storedBucketList);
+    }
+
+    if (storedCompletedItems) {
+      setCompletedItems(storedCompletedItems);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Store the data in local storage whenever the state changes
+    localStorage.setItem("bucketList", JSON.stringify(bucketList));
+    localStorage.setItem("completedItems", JSON.stringify(completedItems));
+  }, [bucketList, completedItems]);
+useEffect(() => {
+  const savedData = JSON.parse(localStorage.getItem('bucketListData'));
+  if (savedData) {
+    setBucketList(savedData.bucketList);
+    setCompletedItems(savedData.completedItems);
+  }
+}, []);
+
+useEffect(() => {
+  localStorage.setItem('bucketListData', JSON.stringify({ bucketList, completedItems }));
+}, [bucketList, completedItems]);
+
   const [showCompletedList, setShowCompletedList] = useState(false);
 
   const addToBucketList = (item, partner) => {
